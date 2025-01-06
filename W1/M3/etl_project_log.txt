@@ -1,0 +1,97 @@
+2025-January-06-16-31-41, Extract start
+2025-January-06-16-31-41, Extract end
+2025-January-06-16-31-41, Transform start
+2025-January-06-16-31-41, Transform end
+2025-January-06-16-31-59, Extract start
+2025-January-06-16-31-59, Extract end
+2025-January-06-16-31-59, Transform start
+2025-January-06-16-31-59, Transform end
+2025-January-06-16-31-59, Load start
+2025-January-06-16-31-59, Load end
+2025-January-06-16-35-09, Extract start
+2025-January-06-16-35-10, Extract end
+2025-January-06-16-35-10, Transform start
+2025-January-06-16-35-10, Transform end
+2025-January-06-16-35-10, Load start
+2025-January-06-16-35-10, Load end
+2025-January-06-16-35-17, Extract start
+2025-January-06-16-35-17, Extract end
+2025-January-06-16-35-17, Transform start
+2025-January-06-16-35-17, Transform end
+2025-January-06-16-35-17, Load start
+2025-January-06-16-35-17, Load end
+2025-January-06-16-54-00, extract start
+2025-January-06-16-54-30, extract start
+2025-January-06-16-54-31, extract end
+2025-January-06-16-54-31, transform start
+2025-January-06-16-54-31, transform end
+2025-January-06-16-54-31, load start
+2025-January-06-16-54-31, load end
+
+2025-January-06-17-11-19, extract start
+2025-January-06-17-11-19, extract end. in 0:00:00.457094
+2025-January-06-17-11-19, transform start
+2025-January-06-17-11-19, transform end. in 0:00:00.029922
+2025-January-06-17-11-19, load start
+2025-January-06-17-11-19, load end. in 0:00:00.000841
+2025-January-06-17-13-24, extract start
+2025-January-06-17-13-25, extract end. in 0:00:01.239565
+2025-January-06-17-13-25, transform start
+2025-January-06-17-14-19, extract start
+2025-January-06-17-14-20, extract end. in 0:00:01.159460
+2025-January-06-17-14-20, transform start
+2025-January-06-17-15-40, extract start
+2025-January-06-17-15-43, extract end. in 0:00:03.163978
+2025-January-06-17-15-43, transform start
+2025-January-06-17-16-39, extract start
+2025-January-06-17-16-42, extract end. in 0:00:02.105328
+2025-January-06-17-16-42, transform start
+2025-January-06-17-22-10, extract start
+2025-January-06-17-22-11, extract end. in 0:00:00.464494
+2025-January-06-17-22-11, transform start
+2025-January-06-17-22-11, transform end. in 0:00:00.031023
+2025-January-06-17-22-11, load start
+2025-January-06-17-22-11, load end. in 0:00:00.000791
+2025-January-06-17-45-44, extract start
+2025-January-06-17-45-44, extract end. in 0:00:00.442129
+2025-January-06-17-45-44, transform start
+2025-January-06-17-45-45, transform end. in 0:00:00.028443
+2025-January-06-17-45-45, load start
+2025-January-06-17-46-22, extract start
+2025-January-06-17-46-22, extract end. in 0:00:00.436860
+2025-January-06-17-46-22, transform start
+2025-January-06-17-46-22, transform end. in 0:00:00.029711
+2025-January-06-17-46-22, load start
+2025-January-06-17-47-05, extract start
+2025-January-06-17-47-05, extract end. in 0:00:00.440360
+2025-January-06-17-47-05, transform start
+2025-January-06-17-47-05, transform end. in 0:00:00.028005
+2025-January-06-17-47-05, load start
+2025-January-06-17-48-30, extract start
+2025-January-06-17-48-30, extract end. in 0:00:00.455181
+2025-January-06-17-48-30, transform start
+2025-January-06-17-48-30, transform end. in 0:00:00.028876
+2025-January-06-17-48-30, load start
+2025-January-06-17-49-07, extract start
+2025-January-06-17-49-07, extract end. in 0:00:00.441533
+2025-January-06-17-49-07, transform start
+2025-January-06-17-49-07, transform end. in 0:00:00.029205
+2025-January-06-17-49-07, load start
+2025-January-06-17-50-39, extract start
+2025-January-06-17-50-40, extract end. in 0:00:00.443087
+2025-January-06-17-50-40, transform start
+2025-January-06-17-50-40, transform end. in 0:00:00.029110
+2025-January-06-17-50-40, load start
+2025-January-06-17-50-40, load end. in 0:00:00.002085
+2025-January-06-17-53-14, extract start
+2025-January-06-17-53-14, extract end. in 0:00:00.453346
+2025-January-06-17-53-14, transform start
+2025-January-06-17-53-14, transform end. in 0:00:00.028942
+2025-January-06-17-53-14, load start
+2025-January-06-17-53-14, load end. in 0:00:00.002344
+2025-January-06-17-53-48, extract start
+2025-January-06-17-53-49, extract end. in 0:00:00.440117
+2025-January-06-17-53-49, transform start
+2025-January-06-17-53-49, transform end. in 0:00:00.028740
+2025-January-06-17-53-49, load start
+2025-January-06-17-53-49, load end. in 0:00:00.002284
