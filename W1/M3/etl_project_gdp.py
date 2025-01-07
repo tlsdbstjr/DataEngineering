@@ -21,9 +21,8 @@ def withLog(func):
             f.write(endTime.strftime("%Y-%B-%d-%H-%M-%S, "))
             f.write(f"{func.__name__} end. in {endTime-startTime}\n")
         return result
-    return wrapper
+    return wrapper   
 
-    
 
 # get the gdp data from wikipedia
 @withLog
@@ -49,25 +48,75 @@ def transform(data):
     # html table to pandas data frame
     df = pd.read_html(StringIO(str(data)))[0]
 
-    # data Transformming
-    cols = df.columns
-    for col in cols:        # for all columns, delete the annotation
+    # delete annotation
+    for col in df.columns:
         df[col] = df[col].apply(lambda x: re.sub(r'\[.*?\]', '', str(x)))
+    
+    return df
+
+@withLog
+def transformGDPTable(df):
+    df = df.droplevel(level=0, axis=1)
+    df.columns = ['Country/Territory', 'IMF Forecast', 'IMF Year', 'World Bank Estimate', 'World BankYear', 'UN Estimate',
+       'UN Year']
+    cols = df.columns
+
     for col in cols[2::2]:  # for year columns, transform the data to integer
         df[col] = df[col].apply(lambda x: int(x) if x.isdigit() else -1)
     for col in cols[1::2]:  # for GDP data, make billion unit and float
-        df[col] = df[col].apply(lambda x: round(float(x)/1000.0, 2) if x.isdigit() else -1.0)
-        
+        df[col] = df[col].apply(lambda x: round(float(x)/1000.0, 2) if x.isdigit() else 0.0)
+
+    df = df.drop(index = [0])
+            
     return df
+
+@withLog
+def transformConjungrate(gdp, region):
+    #_gdp = gdp.reset_index(drop=True)
+    #_region = region.reset_index(drop=True)
+
+    res = gdp.merge(
+        region[['Country or Area', 'Geographical subregion']],
+        left_on='Country/Territory',
+        right_on='Country or Area',
+        how='left'
+    )
+    res = res.drop('Country or Area', axis=1)
+
+    return res
 
 # write the dataFrame to a json file
 @withLog
 def load(dataFrame):
     # extract dataFrame by json
     dataFrame.transpose().to_json('Countries_by_GDP.json')
-        
 
-url = 'https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29'
+def printOver100B(gdpData):
+    print(gdpData[gdpData['IMF Forecast'] >= 100.0]['Country/Territory'])
 
-a = transform(extract(url))
-load(a)
+def printTop5(gdpData):
+    top5 = gdpData.groupby('Geographical subregion').apply(lambda x: x.sort_values('IMF Forecast').head(5))
+    top5 = top5.reset_index(level = 0, drop=True)
+    top5 = top5.groupby('Geographical subregion')['IMF Forecast'].mean()
+    print(top5)
+
+# main
+# urls
+urlGDP = 'https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29'
+urlRegion = 'https://en.wikipedia.org/wiki/List_of_countries_and_territories_by_the_United_Nations_geoscheme'
+
+# gdp ETL process
+gdp = extract(urlGDP)
+gdp = transform(gdp)
+gdp = transformGDPTable(gdp)
+
+# region ETL process
+region = extract(urlRegion)
+region = transform(region)
+
+# merge two tables
+gdpTable = transformConjungrate(gdp, region)
+
+# print what we want
+printOver100B(gdpTable)
+printTop5(gdpTable)
