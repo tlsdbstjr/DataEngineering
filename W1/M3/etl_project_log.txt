@@ -121,3 +121,41 @@
 2025-January-07-16-34-56, transform end. in 0:00:00.048394
 2025-January-07-16-34-56, transformConjungrate start
 2025-January-07-16-34-56, transformConjungrate end. in 0:00:00.000983
+2025-January-08-15-48-52, extract start
+2025-January-08-15-48-52, extract end. in 0:00:00.448663
+2025-January-08-15-48-52, transform start
+2025-January-08-15-48-52, transform end. in 0:00:00.031791
+2025-January-08-15-48-52, transformGDPTable start
+2025-January-08-15-48-52, transformGDPTable end. in 0:00:00.001082
+2025-January-08-15-48-52, extract start
+2025-January-08-15-48-53, extract end. in 0:00:00.491582
+2025-January-08-15-48-53, transform start
+2025-January-08-15-48-53, transform end. in 0:00:00.058113
+2025-January-08-15-48-53, transformConjungrate start
+2025-January-08-15-48-53, transformConjungrate end. in 0:00:00.000946
+2025-January-08-15-48-53, load start
+2025-January-08-15-48-53, load end. in 0:00:00.000782
+2025-January-08-16-04-38, extract start
+2025-January-08-16-04-38, extract end. in 0:00:00.431705
+2025-January-08-16-04-38, transform start
+2025-January-08-16-04-38, transform end. in 0:00:00.029021
+2025-January-08-16-04-38, transformGDPTable start
+2025-January-08-16-05-04, extract start
+2025-January-08-16-05-05, extract end. in 0:00:00.477816
+2025-January-08-16-05-05, transform start
+2025-January-08-16-05-05, transform end. in 0:00:00.027573
+2025-January-08-16-05-05, transformGDPTable start
+2025-January-08-16-05-17, extract start
+2025-January-08-16-05-17, extract end. in 0:00:00.451884
+2025-January-08-16-05-17, transform start
+2025-January-08-16-05-17, transform end. in 0:00:00.027109
+2025-January-08-16-05-17, transformGDPTable start
+2025-January-08-16-05-17, transformGDPTable end. in 0:00:00.001055
+2025-January-08-16-05-17, extract start
+2025-January-08-16-05-18, extract end. in 0:00:00.494988
+2025-January-08-16-05-18, transform start
+2025-January-08-16-05-18, transform end. in 0:00:00.055560
+2025-January-08-16-05-18, transformConjungrate start
+2025-January-08-16-05-18, transformConjungrate end. in 0:00:00.001152
+2025-January-08-16-05-18, load start
+2025-January-08-16-05-18, load end. in 0:00:00.000659
