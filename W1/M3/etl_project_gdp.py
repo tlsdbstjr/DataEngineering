@@ -105,17 +105,20 @@ def printTop5(gdpData):
 urlGDP = 'https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29'
 urlRegion = 'https://en.wikipedia.org/wiki/List_of_countries_and_territories_by_the_United_Nations_geoscheme'
 
-# gdp ETL process
+# gdp ET process
 gdp = extract(urlGDP)
 gdp = transform(gdp)
 gdp = transformGDPTable(gdp)
 
-# region ETL process
+# region ET process
 region = extract(urlRegion)
 region = transform(region)
 
 # merge two tables
 gdpTable = transformConjungrate(gdp, region)
+
+# and load merged table
+load(gdpTable)
 
 # print what we want
 printOver100B(gdpTable)
