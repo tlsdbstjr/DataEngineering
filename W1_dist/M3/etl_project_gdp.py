@@ -152,17 +152,5 @@ gdpTable = transformConjungrate(gdp, region)
 load(gdpTable)
 
 # print what we want
-#printOver100B(gdpTable)
-#printTop5(gdpTable)
-
-#print(gdpTable[gdpTable['Geographical subregion'].isna()])
-
-# 다음은 두 표간 국가명이 매치되지 않는 행을 출력하는 코드입니다.
-testTable = gdp.merge(
-    region[['Country or Area', 'Geographical subregion']],
-        left_on='Country/Territory',
-        right_on='Country or Area',
-        how='outer'
-)
-pd.set_option('display.max_row', None)
-print(pd.concat([testTable[testTable['Country/Territory'].isna()], testTable[testTable['Country or Area'].isna()]])[['Country/Territory', 'Country or Area']])
+printOver100B(gdpTable)
+printTop5(gdpTable)

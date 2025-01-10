@@ -196,23 +196,72 @@ def printOneRegion(year, regionIdxSel, regionSel):
 # import gdp data from imf
 url = 'https://www.imf.org/external/datamapper/api/v1/NGDPD'
 imf_gdp = transform_IMF_GDP(extract(url))
-#loadToSQL(imf_gdp, "imf_gdp", index=True, index_label="country")
+loadToSQL(imf_gdp, "imf_gdp", index=True, index_label="country")
 
 # import iso countries' name data from saved csv file
 ISO_Countries = pd.read_csv('./ISO_3166_Countries.csv')
-#loadToSQL(ISO_Countries, "iso_country_name")
+loadToSQL(ISO_Countries, "iso_country_name")
 
+# user inputs
+year = 2024
+regionIdx = ["region","sub-region","intermediate-region"]
+regionIdxSel = ""
+regions = []
+regionSel = ""
+isSelectAll = False
 
-# 다음은 두 표간 국가명이 매치되지 않는 데이터를 추출하는 코드입니다.
-imf_gdp = imf_gdp.reset_index()
+# year select
+while True:
+    try:
+        year = int(input("Target year:"))
+    except:
+        continue
+    else:
+        break
 
-testTable = imf_gdp.merge(
-    ISO_Countries,
-    how="outer",
-    left_on="index",
-    right_on="alpha-3"
-)
+# region index select
+for i, data in enumerate(regionIdx):
+    print(f"{i+1}.", data)
 
-pd.set_option('display.max_row', None)
-print(pd.concat([testTable[testTable['index'].isna()], testTable[testTable['alpha-3'].isna()]])[['index', 'name']])
+while True:
+    try:
+        sel = int(input("your selection (1,2,3):"))
+        regionIdxSel = regionIdx[sel - 1]
+    except:
+        continue
+    else: 
+        print(regionIdxSel, "is selected\n")
+        break
+
+# reion select
+sql = f"""
+    SELECT DISTINCT "{regionIdxSel}"
+    FROM iso_country_name
+"""
+regions = sendQuery(sql)
+
+for i, data in enumerate(regions):
+    print(f"{i+1}.", data[0])
+
+while True:
+    try:
+        sel = int(input("your selection (1,2,3..., 0 for all):"))
+        if sel == 0:
+            print("All is selected")
+            isSelectAll = True
+            break
+        regionSel = regions[sel - 1][0]
+    except:
+        continue
+    else: 
+        print(regionSel, "is selected\n")
+        break
+
+# print information
+if isSelectAll:
+    printAll(year,regionIdxSel)
+
+else:
+    printOneRegion(year,regionIdxSel,regionSel)
+
 

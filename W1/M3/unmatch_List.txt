@@ -1,0 +1,107 @@
+(base) admin@adminui-MacBookPro M3 % python3 etl_project_gdp.py
+         Country/Territory                                    Country or Area
+3                      NaN                                     American Samoa
+6                      NaN                                           Anguilla
+7                      NaN                                         Antarctica
+26                     NaN                   Bolivia (Plurinational State of)
+27                     NaN                  Bonaire, Sint Eustatius and Saba 
+30                     NaN                                      Bouvet Island
+32                     NaN                     British Indian Ocean Territory
+33                     NaN                             British Virgin Islands
+35                     NaN                                  Brunei Darussalam
+39                     NaN                                        Cabo Verde 
+49                     NaN     China, Hong Kong Special Administrative Region
+50                     NaN         China, Macao Special Administrative Region
+51                     NaN                                   Christmas Island
+52                     NaN                            Cocos (Keeling) Islands
+56                     NaN                                             Congo 
+57                     NaN                                       Cook Islands
+64                     NaN                                           Czechia 
+65                     NaN                                     Côte d'Ivoire 
+67                     NaN             Democratic People's Republic of Korea 
+68                     NaN                  Democratic Republic of the Congo 
+81                     NaN                                          Eswatini 
+83                     NaN                        Falkland Islands (Malvinas)
+84                     NaN                                      Faroe Islands
+88                     NaN                                            France 
+89                     NaN                                      French Guiana
+91                     NaN                        French Southern Territories
+97                     NaN                                          Gibraltar
+101                    NaN                                         Guadeloupe
+102                    NaN                                               Guam
+104                    NaN                                           Guernsey
+109                    NaN                  Heard Island and McDonald Islands
+110                    NaN                                          Holy See 
+118                    NaN                         Iran (Islamic Republic of)
+121                    NaN                                        Isle of Man
+127                    NaN                                             Jersey
+135                    NaN                   Lao People's Democratic Republic
+153                    NaN                                         Martinique
+156                    NaN                                            Mayotte
+159                    NaN                   Micronesia (Federated States of)
+164                    NaN                                         Montserrat
+168                    NaN                                           Myanmar 
+178                    NaN                                               Niue
+179                    NaN                                     Norfolk Island
+182                    NaN                           Northern Mariana Islands
+193                    NaN                                          Pitcairn 
+198                    NaN                                 Republic of Korea 
+199                    NaN                                Republic of Moldova
+202                    NaN                                 Russian Federation
+204                    NaN                                            Réunion
+205                    NaN                                   Saint Barthélemy
+206                    NaN                                      Saint Helena 
+209                    NaN                         Saint Martin (French part)
+210                    NaN                          Saint Pierre and Miquelon
+214                    NaN                              Sao Tome and Principe
+222                    NaN                          Sint Maarten (Dutch part)
+228                    NaN       South Georgia and the South Sandwich Islands
+233                    NaN                                 State of Palestine
+236                    NaN                     Svalbard and Jan Mayen Islands
+240                    NaN                               Syrian Arab Republic
+246                    NaN                                       Timor-Leste 
+248                    NaN                                            Tokelau
+256                    NaN                                            Türkiye
+261                    NaN  United Kingdom of Great Britain and Northern I...
+262                    NaN                        United Republic of Tanzania
+264                    NaN               United States Minor Outlying Islands
+265                    NaN                       United States Virgin Islands
+266                    NaN                           United States of America
+271                    NaN                 Venezuela (Bolivarian Republic of)
+272                    NaN                                           Viet Nam
+274                    NaN                          Wallis and Futuna Islands
+275                    NaN                          Western Sahara (disputed)
+280                    NaN                                      Åland Islands
+25                 Bolivia                                                NaN
+34                  Brunei                                                NaN
+43              Cape Verde                                                NaN
+55                   Congo                                                NaN
+63          Czech Republic                                                NaN
+66                DR Congo                                                NaN
+73              East Timor                                                NaN
+80                Eswatini                                                NaN
+87                  France                                                NaN
+112              Hong Kong                                                NaN
+117                   Iran                                                NaN
+124            Ivory Coast                                                NaN
+132                 Kosovo                                                NaN
+136                   Laos                                                NaN
+145                  Macau                                                NaN
+158             Micronesia                                                NaN
+160                Moldova                                                NaN
+167                Myanmar                                                NaN
+180            North Korea                                                NaN
+187              Palestine                                                NaN
+201                 Russia                                                NaN
+221           Sint Maarten                                                NaN
+229            South Korea                                                NaN
+239                  Syria                                                NaN
+241  São Tomé and Príncipe                                                NaN
+242                 Taiwan                                                NaN
+244               Tanzania                                                NaN
+252                 Turkey                                                NaN
+260         United Kingdom                                                NaN
+263          United States                                                NaN
+270              Venezuela                                                NaN
+273                Vietnam                                                NaN
+278               Zanzibar                                                NaN
