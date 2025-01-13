@@ -1,0 +1,24 @@
+3635 start, arg='Africa'
+3635 end
+3637 start, arg='Europe'
+3636 start, arg='America'
+3637 end
+3636 end
+3638 start, arg='None'
+3638 end
+3672 start, arg='Africa'
+3672 end
+3673 start, arg='America'
+3673 end
+3675 start, arg='None'
+3674 start, arg='Europe'
+3675 end
+3674 end
+3706 start, arg='Europe'
+3707 start, arg='None'
+3705 start, arg='America'
+3704 start, arg='Africa'
+3706 end
+3707 end
+3705 end
+3704 end
