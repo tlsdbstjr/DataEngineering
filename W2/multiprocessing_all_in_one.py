@@ -11,7 +11,7 @@ def work(todo:mp.Queue, done:mp.Queue):
         try:
             i = todo.get_nowait()   # by non-blocking
         except:
-            pass    # if todo is empty: re-check is todo is empty
+            continue    # if todo is empty: re-check is todo is empty
         else:
             print(f"Task no {i} at {mp.current_process().name}")
             time.sleep(EXECUTION_TIME)
