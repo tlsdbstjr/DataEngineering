@@ -7,7 +7,7 @@ THREAD_COUNT = 4
 CONTINENTS = ["Africa", "America", "Europe", None]
 
 def printNameContinent(lock, name:str):
-    # with the lock, write log that the process is started
+    # with the lock, write log that the process start
     lock.acquire()
     with open("./M2Log.txt", "a") as f:
         f.write(f"{mp.current_process().pid} start, arg='{name}'\n")
@@ -17,7 +17,7 @@ def printNameContinent(lock, name:str):
     print(name if name else 'Asia')
     # time.sleep(1) # simulate process time
 
-    # with the log, write log that the process is end
+    # with the log, write log that the process end
     lock.acquire()
     with open("./M2Log.txt", "a") as f:
         f.write(f"{mp.current_process().pid} end\n")
