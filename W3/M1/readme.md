@@ -13,7 +13,7 @@ docker image build -t hd-single .
 ```
 3. 컨테이너를 만들고 실행합니다.
 ```sh
-docker run -itd --name hadoop-master --hostname master --network hadoop-net -p 8088:8088 -p 9870:9870 -p 9864:9864 -p 9866:9866 -p 9867:9867 master_img bash
+docker run -itd --name hadoop -p 8088:8088 -p 9870:9870 -p 9864:9864 -p 9866:9866 -p 9867:9867 hd-single bash
 ```
 4. (이후 수정 예정) 실행중인 컨테이너에서 ssh를 시작합니다.
 ```sh
