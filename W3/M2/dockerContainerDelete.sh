@@ -7,3 +7,4 @@ docker container rm hadoop-slave${num}
 done
 
 docker container rm hadoop-master
+docker network rm hadoop-net

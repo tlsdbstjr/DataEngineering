@@ -15,7 +15,6 @@ ENV HDFS_SECONDARYNAMENODE_USER=root
 ENV YARN_RESOURCEMANAGER_USER=root
 ENV YARN_NODEMANAGER_USER=root
 
-
 # Install necessary packages
 RUN apt-get update && \
     apt-get install -y openjdk-8-jdk ssh rsync && \
@@ -44,9 +43,13 @@ RUN ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa && \
 # Expose Hadoop ports
 EXPOSE 8088 9870 9864 9866 9867
 
-RUN echo "export JAVA_HOME=$JAVA_HOME" >> $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+RUN echo "export JAVA_HOME=$JAVA_HOME" >> $HADOOP_HOME/etc/hadoop/hadoop-env.sh && \
+    $HADOOP_HOME/bin/hdfs namenode -format
 
 # Start Hadoop services
-CMD ["sh", "-c", "service ssh start; $HADOOP_HOME/bin/hdfs namenode -format; $HADOOP_HOME/sbin/start-dfs.sh && $HADOOP_HOME/sbin/start-yarn.sh && bash"]
+CMD service ssh start && \
+    $HADOOP_HOME/sbin/start-dfs.sh && \
+    $HADOOP_HOME/sbin/start-yarn.sh && \
+    tail -f /dev/null
 
 # ENTRYPOINT ["tail", "-f", "/dev/null"]

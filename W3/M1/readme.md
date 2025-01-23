@@ -15,20 +15,5 @@ docker image build -t hd-single .
 ```sh
 docker run -itd --name hadoop -p 8088:8088 -p 9870:9870 -p 9864:9864 -p 9866:9866 -p 9867:9867 hd-single bash
 ```
-4. (이후 수정 예정) 실행중인 컨테이너에서 ssh를 시작합니다.
-```sh
-service ssh start
-````
-5. (이후 수정 예정) hdfs를 포멧합니다
-```sh
-hdfs namenode -format
-````
-6. (이후 수정 예정) hdfs를 켭니다.
-```sh
-start-dfs.sh
-````
-7. (이후 수정 예정) yarn을 켭니다.
-```sh
-start-yarn.sh
-```
-8. 브라우저를 localhost:8088혹은 localhost:9870을 접속합니다.
+4. 3번의 코드를 실행하면 명령어를 입력중이던 터미널이 docker 컨테이너에 접속이 되고, 하둡에서 필요한 작업은 계속해서 터미널에서 하면 됩니다.
+5. 브라우저를 localhost:8088혹은 localhost:9870을 접속합니다.

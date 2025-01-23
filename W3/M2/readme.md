@@ -32,3 +32,4 @@ docker container exec -it hadoop-master bash
 ```sh
 ./dockerContainerStop.sh
 ```
+2. 도커 컨테이너를 배치파일을 이용해 제거합니다.

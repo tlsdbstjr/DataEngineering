@@ -15,12 +15,9 @@ ssh-keygen -t rsa -P "" -f ./id_rsa
 # make network group
 docker network rm hadoop-net
 docker network create --driver=bridge hadoop-net
-# run slaves
+
+# make slave image
 docker build -t slave_img -f ./Dockerfile_slave .
-for ((num=0; num<SLAVE_CNT; num++))
-do
-docker container create --name hadoop-slave${num} --hostname slave${num} --network hadoop-net slave_img
-done
 
 # make master image
 docker build -t master_img -f ./Dockerfile_master .
