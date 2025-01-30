@@ -24,7 +24,7 @@ docker build -t master_img -f ./Dockerfile_master .
 
 # run the master
 #docker run -itd --name hadoop-master --hostname master --network hadoop-net -p 8088:8088 -p 9870:9870 -p 9864:9864 -p 9866:9866 -p 9867:9867 master_img bash
-docker container create --name hadoop-master --hostname master --network hadoop-net -p 8088:8088 -p 9870:9870 master_img
+#docker container create --name hadoop-master --hostname master --network hadoop-net -p 8088:8088 -p 9870:9870 master_img
 
 # delete hard links of common file
 rm workers

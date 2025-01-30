@@ -5,3 +5,7 @@ W2/M5/training.1600000.processed.noemoticon.csv
 .DS_store
 __pycache__
 hadoop-3.3.6.tar.gz
+redditSecret
+.DS_Store
+W4/M1/spark-3.5.4-bin-hadoop3.tar
+miniProj/동별_목적OD_20240320.csv
