@@ -1,0 +1,3 @@
+services:
+  slave:
+    image: hadoop
