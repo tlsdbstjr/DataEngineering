@@ -7,5 +7,5 @@ docker container stop spark-slave${num} &
 done
 
 docker container stop spark-master &
-wait
 
+wait

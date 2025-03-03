@@ -12,6 +12,10 @@ done
 # make ssh key first
 ssh-keygen -t rsa -P "" -f ./id_rsa
 
+# make network group
+docker network rm hadoop-net
+docker network create --driver=bridge hadoop-net
+
 # make slave image
 docker build -t slave_spark -f ./spark_slave.dockerfile .
 

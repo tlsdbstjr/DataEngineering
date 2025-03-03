@@ -1,6 +1,9 @@
 #! /bin/sh
 SLAVE_CNT=4
 
+# make network groups
+docker network create --driver=bridge hadoop-net
+
 for ((num=0; num<SLAVE_CNT; num++))
 do
 docker container create --name spark-slave${num} --hostname slave${num} --network hadoop-net slave_spark

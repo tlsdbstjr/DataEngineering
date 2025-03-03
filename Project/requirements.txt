@@ -1,0 +1,5 @@
+beautifulsoup4
+requests
+pyarrow
+boto3
+smart_open
